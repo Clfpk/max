@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_product_template_form_custom" model="ir.ui.view">
+        <field name="name">product.template.form.custom</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Product Info">
+                    <group>
+                        <field name="package"/>
+                        <field name="sub_category"/>
+                        <field name="quantity"/>
+                        <field name="sub_quantity"/>
+                        <field name="issued_quantity"/>
+                        <field name="total_quantity"/>
+                        <field name="remark"/>
+                        <field name="part_number"/>
+                        <field name="type_no"/>
+                        <field name="part_name"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+<!--    <record id="view_product_template_search_custom" model="ir.ui.view">-->
+<!--        <field name="name">product.template.search.custom</field>-->
+<!--        <field name="model">product.template</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search string="Product Templates">-->
+<!--                <field name="sub_category" string="Sub Category"/>-->
+<!--                <filter string="Category" name="category" domain="[('categ_id', 'ilike', self)]"/>-->
+<!--                <filter string="Sub Category" name="sub_category_filter" domain="[('sub_category', 'ilike', self)]"/>-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
+</odoo>
